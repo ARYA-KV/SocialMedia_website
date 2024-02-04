@@ -1,0 +1,431 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    display: none; /* to hide scroll bar but can scroll the screen */
+    
+}
+.content{
+    height: 100vh;
+    width: 100%;
+    
+
+   
+
+}
+/* div 1 */
+.intro{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/owll.png");
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    
+}
+
+/* side bar */
+.sidebar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+   
+    background-color:#02214c;
+    
+    width: 280px;
+    height: 130vh;
+  
+    
+}
+
+
+#web-name{
+    font-size: 45px;
+    margin-left: 30%;
+    margin-top: 20%;
+    font-family: 'Protest Riot', sans-serif;
+    color: white;
+    margin-left: 33%;
+  
+}
+#owl-span{
+    color: orangered;
+}
+#owl-span2{
+    color: orange;
+}
+
+/* icons */
+.home-icon{
+    margin-left: 30%;
+    margin-top: 100px;
+   
+}
+#home-text,#profile-text,#person-text,#notifi-text,#logout-text{
+    text-decoration: none;
+    color: white;
+}
+.profile-icon{
+    margin-left: 30%;
+    margin-top: 30px;
+
+}
+
+.person-icon{
+    margin-left: 30%;
+    margin-top: 30px;
+
+}
+
+.notifi-icon{
+    margin-left: 30%;
+    margin-top: 30px;
+
+}
+.logout-icon{
+    margin-left: 30%;
+    margin-top: 20px;
+
+
+}
+/* div 2 */
+
+
+/* main-content*/
+.main-content{
+    width:82%;
+    height: 200vh;
+     /* background-color: aquamarine;  */
+    align-items: center;
+    justify-content: center;
+    margin-left: 260px;
+    position: relative;
+
+
+}
+/* header */
+.header{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    margin-left: 100px;
+     /* background-color: rgb(93, 228, 44);  */
+
+}
+.profile-pic{
+    width: 170px;
+    height: 170px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-left: 30px;
+    border: 5px solid black;
+  
+    
+}
+#prof-girl{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+  
+   
+}
+.profile-pic:hover {
+    border-color:rgb(4, 68, 94);
+    transform: scale(1.1); /* Scale the profile pic by 10% on hover */
+}
+.prof-about{
+    margin-top: 30px;
+    margin-left: 50px;
+    /* background-color: rgb(171, 29, 29);   */
+    height: 40px;
+    width: 400px;
+    display: flex; 
+    justify-content: space-evenly; 
+
+
+}
+#check-icon{
+    margin-left:10px;
+   
+}
+.logout{
+   
+    margin-top: 7px;
+    width: 30%;
+  
+}
+.logout a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: #1923e6; /* Change the background color as needed */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+
+}
+.sub-content{
+   width:500px;
+   height: 150px;
+   /* background-color:chocolate; */
+   margin-left: 350px;
+  
+}
+.count{
+    display: flex;
+    justify-content:space-around;
+    /* background-color: aqua; */
+   
+
+}
+.user-name{
+    margin-left: 50px;
+}
+.about-girl{
+    margin-left: 50px;
+    color: gray;
+
+}
+.sub-about{
+    margin-left: 45px;
+
+}
+
+/* story */
+.story{
+    width: 100%;
+    height: 150px;
+    /* background-color: chartreuse;  */
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 20px;
+}
+.story1,.story2,.story3{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 3px solid rgb(213, 208, 208);
+    
+
+
+}
+#st-mern,#st-growth,#st-dsa{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/* post */
+.container{
+    /* background-color: cadetblue; */
+    width:100%;
+    height: 175vh;
+    margin-top: 40px;
+    margin-right:900px;
+    display: grid;
+    grid-template-rows: repeat(3, 400px);
+    grid-template-columns: repeat(3, 395px);
+    justify-content: space-between;
+    row-gap: 4px;
+    column-gap: 4px; /* Adjust the gap between items as needed */
+}
+.item{
+   
+    position: relative;
+    overflow: hidden;/* When overflow is set to hidden, it means that if any content inside the .item exceeds the dimensions specified (width and height), it will be clipped or hidden, and no scrollbars will appear to allow the user to see the hidden content.  */
+
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.item:hover .overlay {
+    opacity: 1; /*  when you hover over an element with the class .item, the opacity of its child element with the class .overlay is set to 1. */
+}
+.like-icon,.comment-icon {
+    font-size: 20px;
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;/* This gives users a visual cue that the element is clickable or interactive. */
+}
+
+.comment-icon {
+    margin-left: 40px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+}
+/* div 3 */
+
+.people{
+    display: flex;
+   
+    width:100%;
+    margin-top: 350px;
+    height: 175vh;
+    /* background-color: aquamarine; */
+}
+.people-post{
+    position: relative;
+    height: 175vh;
+    width: 65%;
+    /* background-color: rgb(18, 212, 18); */
+    position: relative;
+   
+}
+.dp-container1{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: goldenrod; */
+    margin-left: 400px;
+    margin-top: 30px;
+    border: 2px solid ;
+}
+#dp{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.person1-name{
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    /* background-color: rgb(249, 41, 41); */
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 25px;
+}
+#day{
+    color: gray;
+}
+.post-container1{
+    position: absolute;
+
+    width: 50%;
+    height: 500px;
+    /* background-color: hotpink; */
+    margin-top: 109px;
+    margin-left: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+
+
+}
+#post1{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+.post-container1:hover .overlay {
+    opacity: 1; /*  when you hover over an element with the class .item, the opacity of its child element with the class .overlay is set to 1. */
+}
+.person2-name{
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    /* background-color: rgb(249, 41, 41); */
+    margin-left: 500px;
+    margin-top: 650px;
+    font-size: 25px;
+}
+.dp-container2{
+    position: absolute;
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: goldenrod; */
+    margin-left: 400px;
+    margin-top: 640px;
+    border: 2px solid ;
+}
+.post-container2{
+    position: absolute;
+
+    width: 50%;
+    height: 500px;
+    /* background-color: hotpink; */
+    margin-top: 700px;
+    margin-left: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+
+  
+
+
+}
+.post-container2:hover .overlay {
+    opacity: 1; /*  when you hover over an element with the class .item, the opacity of its child element with the class .overlay is set to 1. */
+}
+#post2{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+.people-suggest{
+    
+    /* background-color: sandybrown; */
+    height: 100vh;
+    width:35% ;
+   
+    justify-content: center;
+    align-items: center;
+    
+}
+.suggestion-container1{
+    
+    width: 250px;
+    height: 200px;
+    /* background-color: deeppink; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.sugg-dp-container{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: rgb(218, 32, 38); */
+    border: 2px solid;
+
+   
+   
+ 
+}
+.sug-name{
+
+    margin-left: 20px;
+}
+#sugg-dp{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.notifi-page{
+    width: 100%;
+    height: 100vh;
+    /* background-color: purple; */
+    background-image: url("./images/emptyy.jpg");
+    /* background-size: cover; */
+    background-position: center;
+    
+
+}
